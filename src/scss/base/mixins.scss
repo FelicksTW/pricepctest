@@ -1,0 +1,48 @@
+/* --- Миксины --- */
+
+// PX - REM
+@function rem($px, $current: 16) {
+	$result: math.div($px, $current) + rem;
+	@return $result;
+}
+
+// PX - EM
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+// PX - %
+@function prc($pxOne, $pxTwo) {
+    $result: math.div($pxOne, $pxTwo) * 100%;
+    @return $result;
+}
+
+// Адаптивное свойство
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $widthBreakpoint, $widthTo: $widthMin, $keepSize: 0) {
+	$addSize: $startSize - $minSize;
+	$minSizeValue: rem($minSize);
+	$startSizeValue: rem($startSize);
+	$widthFromMedia: em($widthFrom);
+	$widthToMedia: em($widthTo);
+
+	@if ($maxWidthContainer > 0 or $widthFrom !=$widthBreakpoint or $widthTo !=$widthMin) and $widthFrom >$widthTo {
+		@if $widthFrom ==$widthBreakpoint or $keepSize > 0 {
+			@media (min-width: $widthFromMedia) {
+				#{$property}: $startSizeValue;
+			}
+		}
+
+		@media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+			#{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthTo + px})) / ((#{$widthFrom - $widthTo}))));
+		}
+
+		@if $widthTo ==$widthMin or $keepSize >0 {
+			@media (max-width: $widthToMedia) {
+				#{$property}: $minSizeValue;
+			}
+		}
+	} @else {
+		#{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthTo + px})) / ((#{$widthCanvas - $widthTo}))));
+	}
+}

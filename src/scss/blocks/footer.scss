@@ -1,0 +1,50 @@
+.footer {
+  padding: rem(50) rem(0) rem(40) rem(0);
+  background-color: $backgroundColor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {}
+
+  &__menu-list {}
+
+  &__support {
+
+    &-link {
+      font-size: rem(26);
+      cursor: pointer;
+      transition: color 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $hoverColor;
+        }
+      }
+    }
+  }
+}
+
+.menu-footer {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__item {}
+
+  &__link {
+    font-size: rem(22);
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+  }
+}

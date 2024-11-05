@@ -1,0 +1,107 @@
+//===============================================================
+
+.hero {
+  padding-top: rem(20);
+  padding-bottom: rem(40);
+
+  &__container {
+    @media (min-width: em(1200)) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: rem(20);
+    }
+
+    @media (max-width: em(1200)) {
+      padding: 0;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__block {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(30);
+
+    @media (min-width: em(1200)) {
+      max-width: rem(720);
+    }
+
+    @media (max-width: em(1200)) {
+      margin-top: rem(-600);
+      max-width: 100%;
+      height: rem(668);
+      padding: rem(0) rem(15);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 64, 36);
+  }
+
+  &__text {
+    line-height: 1.3;
+    @include adaptiveValue("font-size", 32, 20);
+
+    @media (max-width: em(1200)) {
+      max-width: rem(720);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(20);
+    max-width: rem(260);
+    padding: rem(30) rem(75);
+    @include adaptiveValue("padding-block", 30, 20);
+    @include adaptiveValue("padding-inline", 75, 10);
+    @include adaptiveValue("font-size", 32, 24);
+    font-weight: 700;
+    color: $whiteColor;
+    background-color: $buttonColor;
+    transition: background-color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $buttonHoverColor;
+      }
+    }
+  }
+
+  &__image {
+    @media (max-width: em(1200)) {
+      position: relative;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    img {}
+  }
+
+  &__image-img {}
+}
+
+.top-section {
+  padding-block: rem(200);
+}
+
+//===============================================================
+
+
+//===============================================================
+
+
+//===============================================================
+
+
+//===============================================================
+
+
+//===============================================================

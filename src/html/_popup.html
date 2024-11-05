@@ -1,0 +1,51 @@
+<div id="popup" aria-hidden="true" class="popup popup--current">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__body popup-body">
+				<div class="popup-body__header">
+					<div class="popup-body__menu">
+						<div class="popup-body__login">Login</div>
+						<a href="#" class="popup-body__signin">Sing in</a>
+					</div>
+					<div class="popup__close">
+						<button data-close type="button" class="popup__close-button">
+							<svg width="15" height="15" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="1.950056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797"
+									stroke-linecap="square" />
+								<path opacity="1.950056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797"
+									stroke-linecap="square" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="popup-body__forms">
+					<form data-dev id="popupForm" class="form popup-body__form" action="#">
+						<div class="popup-body__form-item">
+							<div class="form__line popup-body__form-line popup-body__form-email">
+								<label class="popup-body__form-label" for="formEmail">E-mail</label>
+								<input placeholder="Start typing here" class="popup-body__form-email-input popup-body__form-inputs"
+									data-validate data-error="Введен не верный E-mail" data-required="email" type="text" name="form[]">
+							</div>
+						</div>
+						<div class="popup-body__form-item">
+							<div class="form__line popup-body__form-line popup-body__form-password">
+								<label class="popup-body__form-label" for="formEmail">Password</label>
+								<input placeholder="Start typing here" class="popup-body__form-password-input popup-body__form-inputs"
+									autocomplete="off" type="password" name="form[]" value="">
+								<button class="form__viewpass popup-body__form-viewpass" type="button">Показати пароль</button>
+							</div>
+						</div>
+						<div class="popup-body__form-item">
+							<div class="form__checkbox popup-body__form-checkbox">
+								<input id="rememberMeCheakbox" type="checkbox" name="rememberMe"
+									class="popup-body__form-checkbox-input">
+								<label for="formCheckbox" class="popup-body__form-checkbox-label">Remember me</label>
+							</div>
+						</div>
+						<button type="submit" class="button popup-body__form-button">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

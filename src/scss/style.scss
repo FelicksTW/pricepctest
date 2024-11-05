@@ -1,0 +1,21 @@
+// Для математических действий
+@use "sass:math";
+
+// базовые стили
+@import "base/var-filling";
+@import "base/mixins";
+@import "base/var-main";
+@import "base/reset";
+// @import "base/icons";
+// @import "base/fonts";
+@import "base/global";
+@import "base/popup";
+@import "base/forms/forms";
+
+// маленькие компоненты
+@import "base/common";
+
+// большие компоненты
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/footer";

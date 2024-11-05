@@ -1,0 +1,23 @@
+/* --- Переменные Для Заполнения --- */
+
+// Основа
+$fontFamily: "Inter";
+$fontSize: 16;
+$widthMin: 320;
+$widthCanvas: 1920;
+$maxWidthContainer: 1440;
+$paddingContainer: 30;
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов)
+// 2 = по брейкпоинтам (контейнер меняет свою ширину по брейкпоинтам)
+$responsiveType: 1;
+
+// Цвета
+$backgroundColor: #090909;
+$mainColor: #fff;
+$whiteColor: #fff;
+$blackColor: #000;
+$hoverColor: #ff7844;
+$buttonColor: #ff7844;
+$buttonHoverColor: #fc5512;
